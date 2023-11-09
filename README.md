@@ -5,10 +5,7 @@ This project is about detecting the Drivable area and detecting lanes on the roa
 ## Dataset
 
 - This dataset contains images for Drivable Area segmentation and Lane detection. All the images are generated using Stable diffusion in Google Colaboratory. This dataset is around 90 Megabytes. The project we are working on has two label outputs for each sample. And these outputs are overlayed on the original image.
-
-We've used stable diffusion to generate images for finetuning the model.
-
-click on the below badge to see how we worked with stable diffusion. The model we used is CompVis's stable-diffusion-v1-4 which can run on T4 GPU provided without any cost by google.
+- We've used stable diffusion to generate images for finetuning the model. click on the below badge to see how we worked with stable diffusion. The model we used is CompVis's stable-diffusion-v1-4 which can run on T4 GPU provided without any cost by google.
 
 <a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/stable_diffusion/stable_diffusion.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 

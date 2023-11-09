@@ -27,11 +27,16 @@ The dataset that we annotated is available in this repository in the datasets fo
 
 ### Python
 
+<a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/datasets/Huggingface_dataset_tutorial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+click on the above badge to see more on how to work with dataset
+
 ```python
 from datasets import load_dataset
 
 dataset = load_dataset("bnsapa/road-detection")
 ```
+This dataset is hosted on huggingface. click [here](https://huggingface.co/datasets/bnsapa/road-detection) to the dataset card
 
 ### Through CLI
 

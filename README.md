@@ -6,6 +6,12 @@ This project is about detecting the Drivable area and detecting lanes on the roa
 
 - This dataset contains images for Drivable Area segmentation and Lane detection. All the images are generated using Stable diffusion in Google Colaboratory. This dataset is around 90 Megabytes. The project we are working on has two label outputs for each sample. And these outputs are overlayed on the original image.
 
+We've used stable diffusion to generate images for finetuning the model.
+
+click on the below badge to see how we worked with stable diffusion. The model we used is CompVis's stable-diffusion-v1-4 which can run on T4 GPU provided without any cost by google.
+
+<a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/stable_diffusion/stable_diffusion.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 ## Annotation
 
 - The images are annotated using labelme tool. Which is an opensource tool used to annotate image data. Each image is annotated twice one is for drivable area segmentation and another is for lane detection.
@@ -84,3 +90,5 @@ This transformation simulates changes in the camera's perspective, including rot
 ## References
 
 [1] [TwinLiteNet: An Efficient and Lightweight Model for Driveable Area and Lane Segmentation in Self-Driving Cars](https://arxiv.org/abs/2307.10705), **Authors**: Quang Huy Che, Dinh Phuc Nguyen, Minh Quan Pham, Duc Khai Lam, **Year**: 2023. Click [here](https://github.com/chequanghuy/TwinLiteNet) to go the TwinLiteNet Repository
+
+[2] The Stable Diffusion code is taken from here. click [here](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/stable_diffusion.ipynb)

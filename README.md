@@ -21,6 +21,14 @@ Within each of these splits, there are three folders:
 
 - Lane: This folder contains labels dedicated to Lane Detection, assisting in identifying and marking lanes on the road.
 
+## Accessing the Dataset
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("bnsapa/road-detection")
+```
+
 
 ## References
 

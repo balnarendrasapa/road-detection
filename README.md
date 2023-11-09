@@ -1,5 +1,7 @@
 # Drivable Area and Lane segmentation
 
+This project is about detecting the Drivable area and detecting lanes on the road. This project is mainly about finetuning the model with the dataset we generated using stable diffusion
+
 
 ## References
 

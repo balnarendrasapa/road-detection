@@ -23,6 +23,8 @@ Within each of these splits, there are three folders:
 
 ## Accessing the Dataset
 
+The dataset that we annotated is available in this repository in the datasets folder as datasets.zip. And also the dataset is pushed to huggingface datasets and you can access the dataset like shown below
+
 ```python
 from datasets import load_dataset
 

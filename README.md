@@ -25,12 +25,19 @@ Within each of these splits, there are three folders:
 
 The dataset that we annotated is available in this repository in the datasets folder as datasets.zip. And also the dataset is pushed to huggingface datasets and you can access the dataset like shown below
 
+### Python
+
 ```python
 from datasets import load_dataset
 
 dataset = load_dataset("bnsapa/road-detection")
 ```
 
+### Through CLI
+
+```bash
+wget https://github.com/balnarendrasapa/road-detection/raw/master/datasets/dataset.zip
+```
 
 ## References
 

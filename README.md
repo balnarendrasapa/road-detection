@@ -68,6 +68,10 @@ This transformation simulates changes in the camera's perspective, including rot
   - The binary masks are also inverted to create a binary mask for the background.
   - These binary masks are converted to PyTorch tensors for use in training the semantic segmentation model.
 
+## Loss
+
+- Tversky loss and Focal loss are used here. Total loss = Focal Loss + Tversky Loss
+
 ## References
 
 [1] [TwinLiteNet: An Efficient and Lightweight Model for Driveable Area and Lane Segmentation in Self-Driving Cars](https://arxiv.org/abs/2307.10705), **Authors**: Quang Huy Che, Dinh Phuc Nguyen, Minh Quan Pham, Duc Khai Lam, **Year**: 2023. Click [here](https://github.com/chequanghuy/TwinLiteNet) to go the TwinLiteNet Repository

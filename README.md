@@ -13,6 +13,24 @@ This project is about detecting the Drivable area and detecting lanes on the roa
 
 - The images are annotated using labelme tool. Which is an opensource tool used to annotate image data. Each image is annotated twice one is for drivable area segmentation and another is for lane detection.
 
+### Labelme Annotation Tool
+
+![image](https://github.com/balnarendrasapa/road-detection/assets/61614290/3458871a-12ff-4ce0-b26c-e0a57f985c96)
+
+Click [here](https://github.com/wkentaro/labelme) to the labelme's github repo
+
+#### Original Image
+
+![image](https://github.com/balnarendrasapa/road-detection/assets/61614290/cda57ce3-14f0-4fec-aa8c-03974c25a753)
+
+#### Annotation for Drivable area segmentation
+
+![image](https://github.com/balnarendrasapa/road-detection/assets/61614290/c34f80fa-07e8-4b82-b767-9da4f8f14071)
+
+#### Annotation for Lane detecton
+
+![image](https://github.com/balnarendrasapa/road-detection/assets/61614290/d2ef6899-de98-41ea-a723-4498ae4454e6)
+
 ## Partitioning
 
 The dataset is structured into three distinct partitions: Train, Test, and Validation. The Train split comprises 80% of the dataset, containing both the input images and their corresponding labels. Meanwhile, the Test and Validation splits each contain 10% of the data, with a similar structure, consisting of image data and label information.

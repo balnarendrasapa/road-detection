@@ -39,6 +39,35 @@ dataset = load_dataset("bnsapa/road-detection")
 wget https://github.com/balnarendrasapa/road-detection/raw/master/datasets/dataset.zip
 ```
 
+## Transformation while Training
+
+#### Random Perspective Transformation:
+This transformation simulates changes in the camera's perspective, including rotation, scaling, shearing, and translation. It is applied with random parameters:
+
+  - degrees: Random rotation in the range of -10 to 10 degrees.
+  - translate: Random translation in the range of -0.1 to 0.1 times the image dimensions.
+  - scale: Random scaling in the range of 0.9 to 1.1 times the original size.
+  - shear: Random shearing in the range of -10 to 10 degrees.
+  - perspective: A slight random perspective distortion.
+  
+#### HSV Color Augmentation:
+  
+  - This changes the hue, saturation, and value of the image.
+  - Random gains for hue, saturation, and value are applied.
+  - The hue is modified by rotating the color wheel.
+  - The saturation and value are adjusted by multiplying with random factors.
+  - This helps to make the model invariant to changes in lighting and color variations.
+  
+#### Image Resizing:
+
+  - If the Images are not in the specified size, the images are resized to a fixed size (640x360) using cv2.resize.
+  
+#### Label Preprocessing:
+  
+  - The labels (segmentation masks) are thresholded to create binary masks. This means that pixel values are set to 0 or 255 based on a threshold (usually 1 in this case).
+  - The binary masks are also inverted to create a binary mask for the background.
+  - These binary masks are converted to PyTorch tensors for use in training the semantic segmentation model.
+
 ## References
 
 [1] [TwinLiteNet: An Efficient and Lightweight Model for Driveable Area and Lane Segmentation in Self-Driving Cars](https://arxiv.org/abs/2307.10705), **Authors**: Quang Huy Che, Dinh Phuc Nguyen, Minh Quan Pham, Duc Khai Lam, **Year**: 2023. Click [here](https://github.com/chequanghuy/TwinLiteNet) to go the TwinLiteNet Repository

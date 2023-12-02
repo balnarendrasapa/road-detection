@@ -6,6 +6,10 @@ import os
 import torch
 import TwinLite as net
 from PIL import Image
+from dotenv import load_dotenv
+load_dotenv()
+
+share = os.getenv("SHARE", False)
 
 
 model = net.TwinLiteNet()
@@ -56,4 +60,8 @@ def predict(image):
 iface = gr.Interface(fn=predict, inputs="image", outputs="image", title="Image Segmentation")
 
 if __name__ == "__main__":
-    iface.launch()
+    if share:
+        server = "0.0.0.0"
+    else:
+        server = "127.0.0.1"
+    iface.launch(server_name = server)

@@ -1,28 +1,24 @@
-# read the doc: https://huggingface.co/docs/hub/spaces-sdks-docker
-# you will also find guides on how best to write your Dockerfile
+# Dockerfile
 
-FROM python:3.9
+# Use the official Python base image
+FROM ubuntu:22.04
 
-WORKDIR /code
+# Set the working directory in the container
+WORKDIR /app
 
-COPY . /code
+# Copy files to the container
+COPY . /app
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+# Update the package lists
+RUN apt-get update \
+    && apt-get install -y python3 python3-pip libgl1-mesa-glx libglib2.0-0 \
+    && apt-get clean
 
-# Set up a new user named "user" with user ID 1000
-RUN useradd -m -u 1000 user
+# Install the required Python packages
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Switch to the "user" user
-USER user
+# Expose the port on which the app will run
+EXPOSE 7860
 
-# Set home to the user's home directory
-ENV HOME=/home/user \
-    PATH=/home/user/.local/bin:$PATH
-
-# Set the working directory to the user's home directory
-WORKDIR $HOME/app
-
-# Copy the current directory contents into the container at $HOME/app setting the owner to the user
-COPY --chown=user . $HOME/app
-
-CMD ["python", "app.py"]
+# Set the entrypoint command to run the app.py file
+CMD ["python3", "app.py"]

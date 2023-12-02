@@ -5,6 +5,7 @@ __pycache__/
 
 input.png
 sample.png
+flagged/
 
 # C extensions
 *.so

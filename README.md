@@ -65,7 +65,13 @@ This dataset is hosted on huggingface. click [here](https://huggingface.co/datas
 wget https://github.com/balnarendrasapa/road-detection/raw/master/datasets/dataset.zip
 ```
 
-## Transformation while Training
+## Training
+
+<a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/submissions/Update%202/Update_2_with_test.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+- Click on the above badge to open jupyter notebook that demonstrates how the model is finetuned.
+
+### Transformation while Training
 
 #### Random Perspective Transformation:
 This transformation simulates changes in the camera's perspective, including rotation, scaling, shearing, and translation. It is applied with random parameters:
@@ -94,13 +100,35 @@ This transformation simulates changes in the camera's perspective, including rot
   - The binary masks are also inverted to create a binary mask for the background.
   - These binary masks are converted to PyTorch tensors for use in training the semantic segmentation model.
 
-## Loss
+### Loss
 
 - Tversky loss and Focal loss are used here. Total loss = Focal Loss + Tversky Loss
 
-## Optimization
+### Optimization
 
 - In this setup, an Adam optimizer with a dynamically decreasing learning rate is employed. This adaptive learning rate is regulated using a Polynomial Learning Rate Scheduler, which gradually reduces the learning rate as the training progresses.
+
+## Deployment
+
+- The model is deployed on Huggingface spaces. click [here](https://huggingface.co/spaces/bnsapa/road-detection) to go there.
+- You can deploy the model locally as well.
+  
+#### Method 1
+- There is a docker image available with this repository. that is `road-detection`.
+- git clone this repo. and `cd` into deployment and run `docker-compose up`.
+- open `http://localhost:7860/` in you browser to see the app
+  
+#### Method 2
+- you can run the following command. This will download the image and deploy it. open `http://localhost:7860/` in you browser to see the app.
+```bash
+docker run -p 7860:7860 -e SHARE=True ghcr.io/balnarendrasapa/road-detection:latest
+```
+
+#### Method 3
+- `cd` into deployment directory. and run `python -m venv .venv` to create a virtual environment.
+- run `pip install -r requirements.txt`
+- run `python app.py`
+- open `http://localhost:7860/` in you browser to see the app
 
 ## References
 

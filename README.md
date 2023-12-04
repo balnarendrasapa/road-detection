@@ -124,7 +124,7 @@ This transformation simulates changes in the camera's perspective, including rot
 docker run -p 7860:7860 -e SHARE=True ghcr.io/balnarendrasapa/road-detection:latest
 ```
 
-### Method 3
+#### Method 3
 - `cd` into deployment directory. and run `python -m venv .venv` to create a virtual environment.
 - run `pip install -r requirements.txt`
 - run `python app.py`

@@ -98,6 +98,8 @@ This transformation simulates changes in the camera's perspective, including rot
 
 <a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/submissions/Update%202/Update_2_with_test.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
+- Click on the above badge to open jupyter notebook that demonstrates how the model is finetuned.
+
 ## Loss
 
 - Tversky loss and Focal loss are used here. Total loss = Focal Loss + Tversky Loss

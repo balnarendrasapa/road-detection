@@ -113,18 +113,18 @@ This transformation simulates changes in the camera's perspective, including rot
 - The model is deployed on Huggingface spaces. click [here](https://huggingface.co/spaces/bnsapa/road-detection) to go there.
 - You can deploy the model locally as well.
   
-#### Method 1
+#### Docker-Compose
 - There is a docker image available with this repository. that is `road-detection`.
 - git clone this repo. and `cd` into deployment and run `docker-compose up`.
 - open `http://localhost:7860/` in you browser to see the app
   
-#### Method 2
+#### Docker
 - you can run the following command. This will download the image and deploy it. open `http://localhost:7860/` in you browser to see the app.
 ```bash
 docker run -p 7860:7860 -e SHARE=True ghcr.io/balnarendrasapa/road-detection:latest
 ```
 
-#### Method 3
+#### Python Virtual Environment
 - `cd` into deployment directory. and run `python -m venv .venv` to create a virtual environment.
 - run `pip install -r requirements.txt`
 - run `python app.py`

@@ -111,7 +111,7 @@ This transformation simulates changes in the camera's perspective, including rot
 ## Deployment
 
 - The model is deployed on Huggingface spaces. click [here](https://huggingface.co/spaces/bnsapa/road-detection) to go there.
-- You can deploy the model locally as well.
+- You can deploy the model locally as well. There are three methods to run the model they are listed below.
   
 #### Docker-Compose
 - There is a docker image available with this repository. that is `road-detection`.

@@ -65,7 +65,13 @@ This dataset is hosted on huggingface. click [here](https://huggingface.co/datas
 wget https://github.com/balnarendrasapa/road-detection/raw/master/datasets/dataset.zip
 ```
 
-## Transformation while Training
+## Training
+
+<a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/submissions/Update%202/Update_2_with_test.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+- Click on the above badge to open jupyter notebook that demonstrates how the model is finetuned.
+
+### Transformation while Training
 
 #### Random Perspective Transformation:
 This transformation simulates changes in the camera's perspective, including rotation, scaling, shearing, and translation. It is applied with random parameters:
@@ -94,17 +100,11 @@ This transformation simulates changes in the camera's perspective, including rot
   - The binary masks are also inverted to create a binary mask for the background.
   - These binary masks are converted to PyTorch tensors for use in training the semantic segmentation model.
 
-## Training
-
-<a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/submissions/Update%202/Update_2_with_test.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
-
-- Click on the above badge to open jupyter notebook that demonstrates how the model is finetuned.
-
-## Loss
+### Loss
 
 - Tversky loss and Focal loss are used here. Total loss = Focal Loss + Tversky Loss
 
-## Optimization
+### Optimization
 
 - In this setup, an Adam optimizer with a dynamically decreasing learning rate is employed. This adaptive learning rate is regulated using a Polynomial Learning Rate Scheduler, which gradually reduces the learning rate as the training progresses.
 

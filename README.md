@@ -94,6 +94,10 @@ This transformation simulates changes in the camera's perspective, including rot
   - The binary masks are also inverted to create a binary mask for the background.
   - These binary masks are converted to PyTorch tensors for use in training the semantic segmentation model.
 
+## Training
+
+<a href="https://colab.research.google.com/github/balnarendrasapa/road-detection/blob/master/submissions/Update%202/Update_2_with_test.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 ## Loss
 
 - Tversky loss and Focal loss are used here. Total loss = Focal Loss + Tversky Loss

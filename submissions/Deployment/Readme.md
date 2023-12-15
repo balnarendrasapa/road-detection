@@ -13,3 +13,5 @@ cd into deployment directory. and run "python -m venv .venv" to create a virtual
 run "pip install -r requirements.txt"
 run "python app.py"
 open http://localhost:7860/ in you browser to see the app
+
+[Youtube Presentation](https://youtu.be/bnyA-d6lZi8)

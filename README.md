@@ -1,3 +1,5 @@
+
+
 # Drivable Area and Lane segmentation
 
 This project is about detecting the Drivable area and detecting lanes on the road. This project is mainly about finetuning the model with the dataset we generated using stable diffusion
@@ -27,7 +29,7 @@ Click [here](https://github.com/wkentaro/labelme) to the labelme's github repo
 
 ![image](https://github.com/balnarendrasapa/road-detection/assets/61614290/c34f80fa-07e8-4b82-b767-9da4f8f14071)
 
-#### Annotation for Lane detecton
+#### Annotation for Lane detection
 
 ![image](https://github.com/balnarendrasapa/road-detection/assets/61614290/d2ef6899-de98-41ea-a723-4498ae4454e6)
 
